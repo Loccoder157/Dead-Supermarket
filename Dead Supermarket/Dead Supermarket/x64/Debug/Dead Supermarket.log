@@ -1,0 +1,4 @@
+﻿  Main.cpp
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(24,55): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(25,53): warning C4305: 'argument': truncation from 'double' to 'float'
+  Dead Supermarket.vcxproj -> D:\Dead Supermarket\Dead Supermarket\x64\Debug\Dead Supermarket.exe

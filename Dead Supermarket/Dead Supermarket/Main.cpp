@@ -1,0 +1,81 @@
+#include <raylib.h>
+#include <iostream>
+#include "default_value.h"
+#include "Main_menu.h"
+#include "Button.h"
+#include "Player.h"
+#include "Camera.h"
+
+int main()
+{
+	// create window
+	InitWindow(n_width,n_height,ch_title);
+	
+	// set fps
+	SetTargetFPS(n_fps);
+
+	// init game
+	bool b_gameinit = true;
+	bool b_inmenu = true;
+
+	Background background{ch_path_background};
+	
+	// button in game
+	Button start_b{ch_path_button_start, {370, 200}, 0.65};
+	Button exit_b{ch_path_button_exit, {370, 400}, 0.65};
+
+	// player
+	Player player{Vector2{200,100}, n_speed_player};
+
+	// camera
+	Cameraworld camera{n_width, n_height, 2.0f};
+
+	// time
+	float f_timeCounter = 0.0f;
+	// game loop
+	while (!WindowShouldClose() && b_gameinit)
+	{
+		// get times
+		f_timeCounter += GetFrameTime();
+
+		// set camera 
+
+		camera.settarget(player.getpositon());
+
+		BeginDrawing();
+		// clear window
+		ClearBackground(RAYWHITE);
+		if (b_inmenu)
+		{
+			// bg
+			background.v_Draw_background();
+			// button start, exit
+			start_b.Draw();
+			exit_b.Draw();
+			
+			if (start_b.isPressed(GetMousePosition(), IsMouseButtonPressed(MOUSE_BUTTON_LEFT))) b_inmenu = false;
+			if (exit_b.isPressed(GetMousePosition(), IsMouseButtonPressed(MOUSE_BUTTON_LEFT))) b_gameinit = false;
+			// title game;
+			DrawTextEx(font_title, ch_title, Vector2{200, 70}, 80, 4, RED);
+		}
+		BeginMode2D(camera.getcamera());
+		if (!b_inmenu)
+		{
+			DrawCircle(550, 350, 10, RED);
+			DrawCircle(570, 350, 10, RED);
+			DrawCircle(590, 350, 10, RED);
+			DrawCircle(600, 350, 10, RED);
+			player.move(true);
+			player.draw(f_timeCounter);
+		}
+
+		EndMode2D();
+		if (!b_inmenu)
+		{
+			DrawText("do lo lan", 10, 10, 20, RED);
+		}
+		EndDrawing();
+	}
+
+	CloseWindow();
+}
