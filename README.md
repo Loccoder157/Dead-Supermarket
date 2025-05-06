@@ -52,7 +52,7 @@ Người chơi bị kẹt trong một siêu thị sau tận thế, nơi những 
 
 - [x] Thiết kế nhân vật
 - [x] Di chuyển người chơi
-- [x] Hệ thống ngày/đêm
+- [ ] Hệ thống ngày/đêm
 - [ ] AI quái vật ban đêm
 - [ ] Phòng an toàn
 - [ ] Hệ thống loot đồ

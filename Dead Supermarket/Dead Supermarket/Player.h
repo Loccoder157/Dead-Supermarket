@@ -9,7 +9,9 @@ public:
 	~Player();
 	void draw(float& f_time);
 	void move(bool b_canmove);
+	Rectangle gethitbox();
 	Vector2 getpositon();
+	void setposition(float x,float y);
 
 private:
 	Vector2 position;

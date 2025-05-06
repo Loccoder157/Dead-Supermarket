@@ -1,10 +1,14 @@
 #include <raylib.h>
 #include <iostream>
+#include <string>
 #include "default_value.h"
 #include "Main_menu.h"
 #include "Button.h"
 #include "Player.h"
 #include "Camera.h"
+#include "Tilemap.h"
+
+using namespace std;
 
 int main()
 {
@@ -23,15 +27,18 @@ int main()
 	// button in game
 	Button start_b{ch_path_button_start, {370, 200}, 0.65};
 	Button exit_b{ch_path_button_exit, {370, 400}, 0.65};
-
 	// player
 	Player player{Vector2{200,100}, n_speed_player};
 
 	// camera
-	Cameraworld camera{n_width, n_height, 2.0f};
+	Cameraworld camera{n_width, n_height, f_zoomplayer};
 
-	// time
+	// time animation
 	float f_timeCounter = 0.0f;
+
+	// tilemap
+	Map map{100, 100, 16};
+
 	// game loop
 	while (!WindowShouldClose() && b_gameinit)
 	{
@@ -61,6 +68,9 @@ int main()
 		BeginMode2D(camera.getcamera());
 		if (!b_inmenu)
 		{
+
+			// mapdraw
+			map.draw(player.gethitbox(), player);
 			DrawCircle(550, 350, 10, RED);
 			DrawCircle(570, 350, 10, RED);
 			DrawCircle(590, 350, 10, RED);
@@ -72,7 +82,9 @@ int main()
 		EndMode2D();
 		if (!b_inmenu)
 		{
-			DrawText("do lo lan", 10, 10, 20, RED);
+			DrawText((to_string(int(player.getpositon().x)).c_str()), 10, 10, 20, RED);
+			DrawText((to_string(int(player.getpositon().y)).c_str()), 10, 30, 20, RED);
+
 		}
 		EndDrawing();
 	}

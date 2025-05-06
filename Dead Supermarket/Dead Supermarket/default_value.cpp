@@ -17,4 +17,10 @@ const char* ch_path_right = "../Game Assets/right.png";
 const char* ch_path_front = "../Game Assets/front.png";
 const char* ch_path_right_run = "../Game Assets/right_run.png";
 
+
+// map path
+const char* ch_floor01 = "../Game Assets/floor02.png";
+const char* ch_wallblock = "../Game Assets/blockwall.png";
+const char* ch_mappath = "../Game Assets/map.txt";
+
 Font font_title = LoadFont("../Game Assets/font.ttf");

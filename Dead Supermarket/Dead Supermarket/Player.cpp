@@ -143,3 +143,15 @@ Vector2 Player::getpositon()
 {
 	return position;
 }
+
+Rectangle Player::gethitbox() 
+{
+	Rectangle hitbox{position.x, position.y, n_player_width, n_player_height};
+	return hitbox;
+}
+
+void Player::setposition(float x, float y)
+{
+	position.x = x;
+	position.y = y;
+}
