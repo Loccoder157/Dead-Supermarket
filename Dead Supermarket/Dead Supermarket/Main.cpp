@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "Camera.h"
 #include "Tilemap.h"
+#include "Barsys.h"
 
 using namespace std;
 
@@ -39,6 +40,9 @@ int main()
 	// tilemap
 	Map map{100, 100, 16};
 
+	//test
+	Bar bartest{{10, 30}, 200, 30, 100};
+	int testvar = 0;
 	// game loop
 	while (!WindowShouldClose() && b_gameinit)
 	{
@@ -71,10 +75,6 @@ int main()
 
 			// mapdraw
 			map.draw(player.gethitbox(), player);
-			DrawCircle(550, 350, 10, RED);
-			DrawCircle(570, 350, 10, RED);
-			DrawCircle(590, 350, 10, RED);
-			DrawCircle(600, 350, 10, RED);
 			player.move(true);
 			player.draw(f_timeCounter);
 		}
@@ -82,9 +82,14 @@ int main()
 		EndMode2D();
 		if (!b_inmenu)
 		{
-			DrawText((to_string(int(player.getpositon().x)).c_str()), 10, 10, 20, RED);
-			DrawText((to_string(int(player.getpositon().y)).c_str()), 10, 30, 20, RED);
-
+			if (IsKeyDown(KEY_I)) {
+				if (testvar < 100)    testvar++;
+			}
+			else {
+				if (testvar >= 0)	testvar--;
+			}
+			bartest.setvalue(testvar);
+			bartest.draw(RED, BLACK);
 		}
 		EndDrawing();
 	}

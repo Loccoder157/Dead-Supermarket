@@ -139,21 +139,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Barsys.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Debug.cpp" />
     <ClCompile Include="default_value.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Main_menu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Tilemap.cpp" />
+    <ClCompile Include="Ui_hub.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Barsys.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="default_value.h" />
     <ClInclude Include="Main_menu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Tilemap.h" />
+    <ClInclude Include="Ui_hub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,6 +36,15 @@
     <ClCompile Include="Tilemap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui_hub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Barsys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="default_value.h">
@@ -54,6 +63,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Tilemap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui_hub.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Barsys.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

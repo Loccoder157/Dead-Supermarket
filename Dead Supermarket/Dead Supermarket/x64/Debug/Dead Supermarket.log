@@ -1,4 +1,10 @@
-﻿  Main.cpp
-D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(28,55): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(29,53): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  Barsys.cpp
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Barsys.cpp(25,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Barsys.cpp(25,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Barsys.cpp(26,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Barsys.cpp(26,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Main.cpp
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(29,55): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Dead Supermarket\Dead Supermarket\Dead Supermarket\Main.cpp(30,53): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
   Dead Supermarket.vcxproj -> D:\Dead Supermarket\Dead Supermarket\x64\Debug\Dead Supermarket.exe
